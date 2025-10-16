@@ -209,12 +209,4 @@ public class Main {
 > 오늘의 키워드: **전략(Strategy)**
 > *Written by 7AAB*
 
-```
-
 ---
-
-✅ 이 버전은  
-- **GitHub Pages / Jekyll / Notion / Typora / VSCode Preview** 어디서든  
-  마크다운 깨짐 없이 정상 렌더링됩니다.  
-- 복붙하면 바로 완성형 블로그 포스트로 사용 가능합니다.
-```
