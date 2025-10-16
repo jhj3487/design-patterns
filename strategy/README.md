@@ -1,9 +1,11 @@
-
-
-````markdown
-# 🎯 Design Pattern 01 – 전략 패턴 (Strategy Pattern)
-
 ---
+title: "🎯 Design Pattern 01 – 전략 패턴 (Strategy Pattern)"
+date: 2025-10-16
+categories: [Design Pattern, OOP]
+tags: [Strategy Pattern, 객체지향, Java, Design Patterns]
+description: 변화에 유연하게 대응하기 위해 상속보다 구성을 사용하고, 전략 패턴으로 행동을 캡슐화/교체하는 방법을 정리합니다.
+---
+
 
 ## 📘 개요
 
