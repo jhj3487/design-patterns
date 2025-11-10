@@ -1,13 +1,10 @@
-```markdown
-# 🎨 Decorator Pattern (데코레이터 패턴)
 
-> **TL;DR**  
+# 🎨 Decorator Pattern (데코레이터 패턴)
+## 개요  
 데코레이터 패턴은 **컴포넌트와 데코레이터 두 구성요소**로 이루어지며,  
 객체의 기능을 **동적으로 추가**할 수 있는 **상속보다 유연한 확장 방식**이다.  
 즉, **상속 대신 구성(Composition)과 위임(Delegation)** 으로 기능을 겹겹이 쌓고,  
 모든 객체가 **같은 컴포넌트 인터페이스**를 공유하여 **OCP(확장에는 열려, 변경에는 닫혀)** 원칙을 실현한다.
-
-
 
 ---
 
@@ -22,7 +19,6 @@
 8. [순서 민감성 & 흔한 실수](#순서-민감성--흔한-실수)
 9. [관련 패턴 비교](#관련-패턴-비교)
 10. [체크리스트](#체크리스트)
-11. [부록: 간단 UML (PlantUML)](#부록-간단-uml-plantuml)
 
 ---
 
@@ -55,7 +51,6 @@
 | **ConcreteDecorator** | 부가기능을 실제로 덧입힘    | `BufferedInputStream`, `DataInputStream`, `PushbackInputStream` 등 |
 
 **텍스트 UML**
-```markdown
 ```
 Client
   → Component (interface/abstract)
@@ -66,8 +61,6 @@ Client
                           │
                 ConcreteDecoratorA / B / ...
 ```
-```
-
 ---
 
 ## 동작 방식 (How it Works)
