@@ -13,8 +13,6 @@ Undo, 큐 처리, 매크로 실행, 장애 복구 등을 가능하게 하는 패
 
 ---
 
----
-
 # 1. 왜 Command 패턴이 필요한가?
 
 보통 우리는 이렇게 동작을 호출합니다:
@@ -45,8 +43,6 @@ turnOn.execute();                            // 나중에 실행 가능
 
 ---
 
----
-
 # 2. 핵심 개념
 
 Command 패턴은 다음을 가능하게 합니다:
@@ -61,9 +57,6 @@ Command 패턴은 다음을 가능하게 합니다:
 ```
 Client → Command → Invoker → Receiver
 ```
-
----
-
 ---
 
 # 3. 식당 비유로 이해하기
@@ -82,8 +75,6 @@ Client → Command → Invoker → Receiver
 즉:
 
 > **요청하는 객체와 수행하는 객체의 결합을 깨고, 요청을 객체로 전달 가능한 메시지로 만든다.**
-
----
 
 ---
 
@@ -287,7 +278,7 @@ public class MacroCommand implements Command {
 
 네가 말한 것처럼 이 패턴은 실제로:
 
-✔ **작업 로그 저장 → 장애 이후 재실행**
+✔ **작업 로그 저장 → 장애 이후 ı재실행**
 ✔ 특정 시점까지의 Command를 순차 실행
 ✔ 반대로 실행해서 상태 복구
 
@@ -298,7 +289,6 @@ public class MacroCommand implements Command {
 
 ---
 
----
 
 # 8. 실무에서 언제 쓰는가?
 
@@ -310,15 +300,12 @@ public class MacroCommand implements Command {
 
 ---
 
----
-
 # 9. Command 패턴 한 줄 정리
 
 > “요청을 객체로 포장해 실행 시점·방법을 유연하게 만들고, Undo/Queue/Macro 실행 같은 고급 흐름을 가능하게 한다.”
 
 ---
 
----
 
 # ✔️ 마무리
 
