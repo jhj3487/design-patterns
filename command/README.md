@@ -112,8 +112,6 @@ classDiagram
 
 ---
 
----
-
 # 5. Java 구현 예제
 
 ## 5-1. Command 인터페이스
@@ -124,7 +122,6 @@ public interface Command {
     void undo();
 }
 ```
-
 ---
 
 ## 5-2. Receiver
@@ -241,8 +238,6 @@ public class Client {
 
 ---
 
----
-
 # 6. 확장 기능 — Macro Command (여러 명령 묶기)
 
 ```java
@@ -269,8 +264,6 @@ public class MacroCommand implements Command {
     }
 }
 ```
-
----
 
 ---
 
