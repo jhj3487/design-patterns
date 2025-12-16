@@ -7,16 +7,12 @@
 이 문서는 **Adapter Pattern**을 정리한 문서입니다.
 어댑터 패턴의 개념, 등장 배경, 해결하는 문제, Java 코드 예제, 구조(UML), 실무 사용 포인트를 종합적으로 정리합니다.
 
----
-
 ## 📚 핵심 요약
 
 * 기존 클라이언트 코드를 변경하지 않고 새로운 구현을 연결할 수 있다
 * 인터페이스 기반 설계를 통해 결합도를 낮춘다
 * 외부 라이브러리, 레거시 코드, 서드파티 모듈 연동에 매우 유용하다
 * 실무 인사이트: **외부 변경은 Adapter에서 끝내고, 내부 도메인은 고정한다**
-
----
 
 ## 1️⃣ 개념 정리
 
@@ -47,7 +43,7 @@ Adapter Pattern은 **기존 인터페이스(Target)** 와 **호환되지 않는 
 * 변경에 닫히고(OCP), 확장에 열려 있는 구조 유지
 
 ### ■ 구조/흐름
-
+Adapter Pattern은 **Client – Target Interface – Adapter – Adaptee** 구조로 동작한다.
 1. Client는 Target Interface에 의존
 2. Adapter는 Target Interface를 구현
 3. Adapter 내부에서 Adaptee를 구성(composition)
@@ -64,8 +60,6 @@ Adapter Pattern은 **기존 인터페이스(Target)** 와 **호환되지 않는 
 
 한국 전자제품을 해외에서 사용하기 위해 전원 어댑터를 사용하는 것처럼,
 소프트웨어에서도 기존 코드와 맞지 않는 인터페이스를 변환해 연결한다.
-
----
 
 ## 2️⃣ 예제 코드
 
@@ -89,8 +83,6 @@ classDiagram
     PaymentAdapter --> LegacyPayment
 ```
 
----
-
 ### ✔ 구현 예제 1: Target Interface
 
 ```java
@@ -98,8 +90,6 @@ public interface PaymentService {
     void pay(int amount);
 }
 ```
-
----
 
 ### ✔ 구현 예제 2: Adaptee (기존/외부 클래스)
 
@@ -110,8 +100,6 @@ public class LegacyPaymentSystem {
     }
 }
 ```
-
----
 
 ### ✔ 구현 예제 3: Adapter
 
@@ -131,7 +119,6 @@ public class PaymentAdapter implements PaymentService {
 }
 ```
 
----
 
 ### ✔ 구현 예제 4: Client
 
@@ -146,7 +133,6 @@ public class Client {
 }
 ```
 
----
 
 ### ✔ 추가 예제: Enumeration → Iterator Adapter (Java)
 ※ Enumeration에는 삭제 개념이 없으므로,
@@ -181,7 +167,6 @@ public class EnumerationIteratorAdapter<T> implements Iterator<T> {
 }
 ```
 
----
 
 ## 3️⃣ 실무 포인트
 
@@ -220,8 +205,6 @@ public class EnumerationIteratorAdapter<T> implements Iterator<T> {
 * Spring: HandlerAdapter, ControllerAdapter
 * JPA: EntityManager와 구현체 간 추상화
 * Servlet API: Wrapper / Adapter 구조 다수 사용
-
----
 
 ## 4️⃣ 정리
 
