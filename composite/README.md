@@ -319,9 +319,3 @@ class Client {
 
 Composite 패턴은 파일 시스템, 조직도, UI 컴포넌트처럼 **부분-전체 계층 구조**가 자연스럽게 생기는 도메인에서 Leaf와 Composite를 동일한 인터페이스로 처리하기 위한 패턴이다. 핵심은 클라이언트가 타입을 구분하지 않고 `operation()` 하나로 전체 트리를 순회할 수 있다는 점이며, 이를 통해 `instanceof` 분기를 제거하고 확장성을 확보한다. 다만 투명성 설계를 선택할 경우 Leaf의 SRP가 약화되고, 트리 깊이가 깊어질수록 성능과 참조 구조 관리가 실무 핵심 과제가 된다.
 
-**다음에 공부할 패턴**: `Iterator` → Composite 구조를 순회할 때 자연스럽게 함께 사용되며, 두 패턴의 조합이 면접에서 자주 나오는 주제
-
-**관련 문서**:
-- [Iterator Pattern 노트](#)
-- [Decorator Pattern 노트](#)
-- [Chain of Responsibility Pattern 노트](#)
